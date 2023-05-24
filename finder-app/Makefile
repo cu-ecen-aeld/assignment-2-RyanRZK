@@ -3,13 +3,13 @@ RM := rm -f
 
 .PHONY: all clean
 
-all: writefile
+all: writer
 
-writefile: writefile.o
-	$(CC) -o writefile writefile.o
+writer: writer.o
+	$(CC) -o writer writer.o
 
-writefile.o: writefile.c
-	$(CC) -c writefile.c
+writer.o: writer.c
+	$(CC) -c writer.c
 
 clean:
-	$(RM) writefile writefile.o
+	$(RM) writer writer.o
